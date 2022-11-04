@@ -1,3 +1,15 @@
+         5
+        / \
+       2   4
+      / \
+     1   1
+
+size = 5
+vec = [1,2,5,1,4]
+current  parent  2P+1  2P+2  current == 2P+1?  current == 2P+2?  vec[current] > vec[parent]?  vec_1      2P+1>2P+2?  vec_2      current == size
+  0       0       1     2        false             false                    false             1,2,5,1,4     true     1,2,5,1,4      false
+
+
 O(n)
 size = 3
 vec = [1,1,2]

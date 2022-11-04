@@ -80,3 +80,12 @@ fn heapify_with_4_elements_8() {
     assert_eq!(heap, vec![3, 1, 2, 1]);
     assert_eq!(max_element, 3);
 }
+
+#[test]
+fn heapify_with_4_elements_9() {
+    let elements = vec![3, 2, 1, 1];
+    let heap = heapify(&elements);
+    let max_element = heap[0];
+    assert_eq!(heap, vec![3, 1, 2, 1]);
+    assert_eq!(max_element, 3);
+}
