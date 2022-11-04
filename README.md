@@ -6,4 +6,4 @@ An implementation of the max/min heap algorithm (aka, priority queue), written i
 
 [Gus Garcia][1]
 
-[1] mailto:guscastles@gmail.com
+[1]: mailto:guscastles@gmail.com
