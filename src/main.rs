@@ -1,3 +1,4 @@
+#![feature(test)]
 #[cfg(test)]
 mod test_1_2_elements;
 #[cfg(test)]
