@@ -1,9 +1,11 @@
-use max_heap::{heapify, MAX_HEAP};
+use max_heap::{heapify, MAX_HEAP, MIN_HEAP};
 
 fn main() {
     println!("Heapify me!");
     let mut elements = vec![1, 2, 5, 1, 4, 0, 10, 9, 8, 100];
     println!("{:?}", elements);
     heapify(&mut elements, MAX_HEAP);
+    println!("{:?}", elements);
+    heapify(&mut elements, MIN_HEAP);
     println!("{:?}", elements);
 }
