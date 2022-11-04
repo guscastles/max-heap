@@ -7,7 +7,5 @@ pub fn order_siblings(child: usize, other_child: usize) -> (usize, usize) {
 }
 
 pub fn swap(elements: &mut Vec<u32>, indexes: (usize, usize)) {
-    let change = elements[indexes.0];
-    elements[indexes.0] = elements[indexes.1];
-    elements[indexes.1] = change;
+    (elements[indexes.1], elements[indexes.0]) = (elements[indexes.0], elements[indexes.1]);
 }
