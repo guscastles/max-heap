@@ -9,3 +9,14 @@ fn main() {
     heapify(&mut elements, MIN_HEAP);
     println!("{:?}", elements);
 }
+
+#[cfg(test)]
+mod tests {
+
+    use super::*;
+
+    #[test]
+    fn run_main() {
+        main();
+    }
+}
