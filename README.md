@@ -4,6 +4,29 @@ An implementation of the max/min heap algorithm (aka, priority queue), written i
 
 ## Development
 
+### Bench Tests
+
+To run bench tests
+1. Add this to the test file and function
+```rust
+
+extern crate test;
+use test::Bencher;
+
+#[bench]
+fn function_to_test(bencher: &mut Bencher) {
+...
+}
+```
+2. Add this to the top of the main file, either `main.rs` or `lib.rs`
+```rust
+#![feature(test)]
+```
+
+Run with
+```bash
+cargo bench
+```
 ### Running code coverage
 
 #### Installing necessary packages
