@@ -40,3 +40,18 @@ fn descending_sort_with_heap(bencher: &mut Bencher) {
         assert_eq!(elements, vec![100, 10, 9, 8, 5, 4, 2, 1, 1, 0]);
     });
 }
+
+#[bench]
+#[ignore]
+fn sort_large_vector(bencher: &mut Bencher) {
+    bencher.iter(|| {
+        let mut elements: Vec<u32> = (1..10_001).collect();
+        let mut current = 0;
+        let size = elements.len();
+        while current < size {
+            create_heap_from(&mut elements, current, MAX_HEAP);
+            current += 1;
+        }
+        assert_eq!(elements[0], 10_000);
+    });
+}

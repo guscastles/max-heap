@@ -15,7 +15,7 @@ pub fn create_heap_from(elements: &mut Vec<u32>, start: usize, heap_type: usize)
 }
 
 fn adjust_child_parent(elements: &mut Vec<u32>, current: usize, start: usize, heap_type: usize) {
-    let mut parent = find_parent(current, start);
+    let mut parent = find_parent(current + start);
     let mut child = current;
     loop {
         adjust_position(elements, (child, parent), heap_type);
@@ -23,7 +23,7 @@ fn adjust_child_parent(elements: &mut Vec<u32>, current: usize, start: usize, he
             break;
         }
         child = parent;
-        parent = find_parent(child, start);
+        parent = find_parent(child + start);
     }
 }
 
@@ -42,7 +42,6 @@ fn swap(elements: &mut Vec<u32>, indexes: (usize, usize)) {
     (elements[indexes.1], elements[indexes.0]) = (elements[indexes.0], elements[indexes.1]);
 }
 
-fn find_parent(child: usize, start: usize) -> usize {
-    let reference = child + start;
-    (reference - (2 - reference % 2)) / 2
+fn find_parent(child: usize) -> usize {
+    (child - (2 - child % 2)) / 2
 }
