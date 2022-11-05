@@ -8,6 +8,8 @@ mod test_4_elements;
 #[cfg(test)]
 mod test_5_elements;
 #[cfg(test)]
+mod test_min_heap;
+#[cfg(test)]
 mod test_several_elements;
 mod utils;
 use utils::{adjust_grand_parents, adjust_position};
