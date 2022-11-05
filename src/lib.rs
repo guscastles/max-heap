@@ -25,10 +25,6 @@ pub fn heapify(elements: &mut Vec<u32>, heap_type: usize) {
 }
 
 fn adjust_child_parent(elements: &mut Vec<u32>, current: usize, heap_type: usize) {
-    let size = elements.len();
-    if current >= size {
-        return;
-    }
     let mut parent = find_parent(current);
     let mut child = current;
     loop {
