@@ -1,4 +1,4 @@
-use super::engine::{heapify, MAX_HEAP, MIN_HEAP};
+use super::engine::{create_heap_from, heapify, MAX_HEAP, MIN_HEAP};
 extern crate test;
 use test::Bencher;
 
@@ -19,14 +19,11 @@ fn ascending_sort_with_heap(bencher: &mut Bencher) {
         let mut elements = vec![1, 2, 5, 1, 4, 0, 10, 9, 8, 100];
         let mut current = 0;
         let size = elements.len();
-        let mut result = vec![];
         while current < size {
-            heapify(&mut elements, MIN_HEAP);
-            result.push(elements[0]);
-            elements = elements[1..].to_vec();
+            create_heap_from(&mut elements, current, MIN_HEAP);
             current += 1;
         }
-        assert_eq!(result, vec![0, 1, 1, 2, 4, 5, 8, 9, 10, 100]);
+        assert_eq!(elements, vec![0, 1, 1, 2, 4, 5, 8, 9, 10, 100]);
     });
 }
 
@@ -36,13 +33,10 @@ fn descending_sort_with_heap(bencher: &mut Bencher) {
         let mut elements = vec![1, 2, 5, 1, 4, 0, 10, 9, 8, 100];
         let mut current = 0;
         let size = elements.len();
-        let mut result = vec![];
         while current < size {
-            heapify(&mut elements, MAX_HEAP);
-            result.push(elements[0]);
-            elements = elements[1..].to_vec();
+            create_heap_from(&mut elements, current, MAX_HEAP);
             current += 1;
         }
-        assert_eq!(result, vec![100, 10, 9, 8, 5, 4, 2, 1, 1, 0]);
+        assert_eq!(elements, vec![100, 10, 9, 8, 5, 4, 2, 1, 1, 0]);
     });
 }
