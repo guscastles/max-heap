@@ -6,5 +6,5 @@ fn heapify_with_minimum_priority_queue() {
     heapify(&mut elements, MIN_HEAP);
     let max_element = elements[0];
     assert_eq!(max_element, 0);
-    assert_eq!(elements, vec![0, 2, 1, 5, 4, 10, 1, 9, 8, 100]);
+    assert_eq!(elements, vec![0, 1, 1, 2, 4, 5, 10, 9, 8, 100]);
 }

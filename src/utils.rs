@@ -1,8 +1,8 @@
 mod index_search;
 mod transform;
 use super::MAX_HEAP;
-use index_search::{find_parent, find_sibling};
-use transform::{order_siblings, swap};
+use index_search::find_parent;
+use transform::swap;
 
 pub fn adjust_grand_parents(elements: &mut Vec<u32>, current: usize, heap_type: usize) {
     let size = elements.len();
@@ -13,11 +13,6 @@ pub fn adjust_grand_parents(elements: &mut Vec<u32>, current: usize, heap_type: 
     let mut child = current;
     loop {
         adjust_position(elements, (child, parent), heap_type);
-        let mut other_child = find_sibling(parent, child);
-        if other_child < size {
-            (child, other_child) = order_siblings(child, other_child);
-            adjust_position(elements, (child, other_child), heap_type);
-        }
         if parent == 0 {
             break;
         }

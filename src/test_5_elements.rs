@@ -14,7 +14,7 @@ fn heapify_with_5_elements_1() {
     let mut elements = vec![1, 2, 5, 1, 4];
     heapify(&mut elements, MAX_HEAP);
     let max_element = elements[0];
-    assert_eq!(elements, vec![5, 2, 4, 1, 1]);
+    assert_eq!(elements, vec![5, 4, 2, 1, 1]);
     assert_eq!(max_element, 5);
 }
 
@@ -23,6 +23,6 @@ fn heapify_with_5_elements_2() {
     let mut elements = vec![1, 2, 3, 4, 5];
     heapify(&mut elements, MAX_HEAP);
     let max_element = elements[0];
-    assert_eq!(elements, vec![5, 3, 4, 1, 2]);
+    assert_eq!(elements, vec![5, 4, 2, 1, 3]);
     assert_eq!(max_element, 5);
 }

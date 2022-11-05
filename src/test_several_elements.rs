@@ -9,6 +9,6 @@ fn heapify_with_10_elements_1(bencher: &mut Bencher) {
         heapify(&mut elements, MAX_HEAP);
         let max_element = elements[0];
         assert_eq!(max_element, 100);
-        assert_eq!(elements, vec![100, 9, 10, 2, 8, 0, 4, 1, 1, 5]);
+        assert_eq!(elements, vec![100, 10, 5, 8, 9, 0, 2, 1, 4, 1]);
     });
 }
