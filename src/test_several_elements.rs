@@ -1,4 +1,4 @@
-use super::*;
+use super::engine::*;
 extern crate test;
 use test::Bencher;
 

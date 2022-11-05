@@ -1,4 +1,4 @@
-use max_heap::{heapify, MAX_HEAP, MIN_HEAP};
+use max_heap::engine::{heapify, MAX_HEAP, MIN_HEAP};
 
 fn main() {
     println!("Heapify me!");

@@ -1,4 +1,4 @@
-use super::*;
+use super::engine::*;
 
 #[test]
 fn heapify_with_minimum_priority_queue() {

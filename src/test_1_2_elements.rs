@@ -1,4 +1,4 @@
-use super::*;
+use super::engine::*;
 
 #[test]
 fn heap_with_no_elements() {

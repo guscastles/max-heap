@@ -1,4 +1,4 @@
-use super::*;
+use super::engine::*;
 
 #[test]
 fn heapify_with_the_same_3_elements() {
