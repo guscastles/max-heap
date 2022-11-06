@@ -1,3 +1,4 @@
+use max_heap::engine::sorting::sort;
 use max_heap::engine::{heapify, MAX_HEAP, MIN_HEAP};
 
 fn main() {
@@ -7,6 +8,8 @@ fn main() {
     heapify(&mut elements, MAX_HEAP);
     println!("{:?}", elements);
     heapify(&mut elements, MIN_HEAP);
+    println!("{:?}", elements);
+    sort(&mut elements, MIN_HEAP);
     println!("{:?}", elements);
 }
 
