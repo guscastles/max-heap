@@ -1,3 +1,4 @@
+pub mod sorting;
 pub const MAX_HEAP: usize = 1;
 pub const MIN_HEAP: usize = 0;
 
@@ -5,7 +6,7 @@ pub fn heapify(elements: &mut Vec<u32>, heap_type: usize) {
     create_heap_from(elements, 0, heap_type);
 }
 
-pub fn create_heap_from(elements: &mut Vec<u32>, start: usize, heap_type: usize) {
+fn create_heap_from(elements: &mut Vec<u32>, start: usize, heap_type: usize) {
     let size = elements.len();
     let mut current: usize = start + 1;
     while current < size {

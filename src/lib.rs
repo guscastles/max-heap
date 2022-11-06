@@ -12,3 +12,5 @@ mod test_5_elements;
 mod test_min_heap;
 #[cfg(test)]
 mod test_several_elements;
+#[cfg(test)]
+mod test_sort;
