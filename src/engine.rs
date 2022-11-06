@@ -16,15 +16,11 @@ fn create_heap_from(elements: &mut Vec<u32>, start: usize, heap_type: usize) {
 }
 
 fn adjust_child_parent(elements: &mut Vec<u32>, current: usize, start: usize, heap_type: usize) {
-    let mut parent = find_parent(current + start);
     let mut child = current;
-    loop {
+    while child != start {
+        let parent = find_parent(child + start);
         adjust_position(elements, (child, parent), heap_type);
-        if parent == start {
-            break;
-        }
         child = parent;
-        parent = find_parent(child + start);
     }
 }
 
