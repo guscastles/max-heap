@@ -22,6 +22,7 @@ fn descending_sort_with_heap(bencher: &mut Bencher) {
 }
 
 #[bench]
+#[ignore = "To be run only when performing manual benchmark testing"]
 fn sort_large_vector(bencher: &mut Bencher) {
     bencher.iter(|| {
         let mut elements: Vec<u32> = (1..10_001).collect();
